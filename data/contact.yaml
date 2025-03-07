@@ -1,9 +1,11 @@
-email: 'example@example.com'
-phone: 'XXXX XXX XXX'
-businessName: 'Hugo Serif'
+email: 'info@calgaryaikikai.com'
+phone: '+1 (403) 667-8102'
+businessName: 'Calgary Aikikai'
+rootWebsite: 'https://calgaryaikikai.com/'
 address: |
-  123 Some Street
-  City, State 12345
+  3818-14A Street SW
+  Calgary, AB, Canada
+  T2T 3Y2
 hours:
   - day: Monday
     open: 8:30am

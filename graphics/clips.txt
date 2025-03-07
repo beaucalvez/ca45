@@ -1,0 +1,71 @@
+
+layouts/index.html
+
+<!-- Not needed for now
+{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
+{{if gt (len $services) 0}}
+<div class="container pt-8 pb-8 pb-md-14 pt-md-14">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <h2 class="text-center mb-3">{{ with .Site.GetPage "/services/" }}{{ .Title | default "Our Services" }}{{ end }}</h2>
+    </div>
+    {{ range first 6 (sort $services ".Params.weight") }}
+    <div class="col-12 col-md-4 mb-1">
+      {{ .Render "summary" }}
+    </div>
+    {{ end }}
+    <div class="col-12 text-center">
+      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
+    </div>
+  </div>
+</div>
+{{end}}
+-->
+
+<!-->
+{{ range first 2 (after 1 $reusablePages) }}
+<div id="about" class="strip bg-primary bg-cover bg-position-top bg-overlay" style='background-image: url("{{ .Params.background | relURL }}");'>
+  <div class="container pt-8 pb-8 pb-md-12 pt-md-12">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 text-center text-white">
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+        {{ if .Params.button }}
+          <a class="button button-white" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+-->
+
+
+<!-- 
+	<h2>Advanced Ukemi Workshop with Ryuji Shirkawa Sensei</h2>
+	<div class="row row-cols-1 row-cols-md-1 mb-3 text-center">
+		{{ range first 1 (after 2 $pricingfull) }} 
+		<div class="col">
+			<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card-header py-3">
+					<h4 class="my-0 fw-normal">
+						{{ .name }}
+					</h4>
+				</div>
+				<div class="card-body">
+					<h1 class="card-title pricing-card-title">
+						Early Bird: ${{ .price1 }}
+						
+					</h1>
+					<ul class="list-unstyled mt-3 mb-4">
+						{{ range .features }} 
+						<li>{{ . }}</li>
+						{{ end }} 
+					</ul>
+					<button type="button" class="w-100 btn btn-lg btn-outline-primary">Register now</button> 
+				</div>
+			</div>
+		</div>
+		{{ end }}
+	</div>
+ -->

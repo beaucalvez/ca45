@@ -1,0 +1,45 @@
+# data/pricingFull.yaml
+
+full:
+  - name: Ukemi Workshop
+    subhead: "Add-on to seminar"
+    featured: true
+    price1: "50.00"
+    className: text-bg-primary
+    price2:
+    button: "https://store.calgaryaikikai.com/45" 
+    features:
+      - Taught by Shirakawa Sensei
+      - Learn how sensei teaches ukemi
+      - Pre seminar workshop, 1 hour
+  - name: Youth & Post-Secondary
+    subhead: "13-17 & 17+"
+    featured: false
+    className: text-bg-primary
+    price1: "150.00"
+    price2: "187.50"
+    button: "https://store.calgaryaikikai.com/45" 
+    features:
+      - Reduced for youths and full-time students
+      - 12 hours of master instruction
+      - Does not include ukemi workshop
+  - name: Adults
+    subhead: "18+"
+    featured: false
+    className: text-bg-primary
+    price1: "300.00"
+    price2: "375.00"
+    button: "https://store.calgaryaikikai.com/45" 
+    features:
+      - 12 hours of master instruction
+      - Central location
+      - Does not include ukemi workshop
+
+# friday, saturday, sunday
+partialsadult:
+  - row: ["N/a","AM: $87.50","AM: $105.00"]
+  - row: ["PM: $70.00","PM: $70.00","PM: $52.50"]
+
+partialsyouthps:
+  - row: ["N/a","AM: $43.75","AM: $52.50"]
+  - row: ["PM: $35.00","PM: $35.00","PM: $26.25"]

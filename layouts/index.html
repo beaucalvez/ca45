@@ -1,0 +1,183 @@
+{{ define "title" }}{{ .Site.Title }}{{ end}} {{ define "header_css" }}{{ end }} {{ define "body_classes" }}page-home{{ end }} {{ define "header_classes" }}header-transparent{{ end }} {{ define "meta_tags" }} 
+<meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" />
+<meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
+<meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
+<meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" />
+<meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+<meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+<meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+{{ end }}
+{{ define "main" }}
+{{ partial "hero-image-fullscreen.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
+{{ $headless := .Site.GetPage "/homepage" }}
+{{ $reusablePages := $headless.Resources.ByType "page" }}
+{{ $reusablePages := sort $reusablePages ".Params.weight" }}
+{{ $pricing := .Site.Data.pricingfull.full }}
+{{ $pricingadultparts := .Site.Data.pricingfull.partialsadult }}
+{{ $pricingyouthpsparts := .Site.Data.pricingfull.partialsyouthps }}
+
+<!-- DETAILS -->
+{{ range first 1 $reusablePages }} 
+<div id="details" class="strip bg-cover bg-position-top bg-overlay" style="background-image: url('{{ .Params.background | relURL }}');">
+	<div class="container pt-7 pb-7">
+		<div class="row">
+			<div class="col-12 col-lg-6 col-xl-10  offset-xl-4 offset-lg-6 bg-white-transparent p-4">
+				<h2 class="text-primary text-capitalize">
+					{{ .Title }}
+				</h2>
+				<p>
+					{{ .Content }}
+				</p>
+				<a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a> 
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}
+
+
+
+
+<!-- PRICING -->
+<div id="pricing">
+	<div class="container pt-4 pb-4 pb-md-6 pt-md-6">
+		<h2 class="mb-3">
+			Full Seminar Pricing – <small>Early bird pricing ends July 1st</small>
+		</h2>
+		<div class="row row-cols-1 row-cols-md-3 mb-2 text-center">
+			{{ range first 3 $pricing }} 
+			<div class="col">
+				<div class="card mb-4 rounded-3 shadow-sm">
+					<div class="card-header py-3 {{ .className }}">
+						<h4 class="my-0 fw-normal">
+							{{ .name }}
+						</h4>
+						{{ if .featured }}
+						<span class="badge rounded-pill text-bg-warning">{{ .subhead }}</span>
+						{{ else }}
+						<span class="badge rounded-pill text-bg-info">{{ .subhead }}</span>
+						{{ end }}
+					</div>
+					<div class="card-body">
+						{{ if .featured }}
+							<h1 class="card-title pricing-card-title">
+								Price: ${{ .price1 }} <br />
+								&nbsp;
+							</h1>
+						{{ else }}	
+							<h1 class="card-title pricing-card-title">
+								Early bird: ${{ .price1 }} <br />
+								Regular: ${{ .price2 }} 
+							</h1>
+						{{ end }}
+						<ul class="list-unstyled mt-3 mb-4">
+							{{ range .features }} 
+							<li>{{ . }}</li>
+							{{ end }} 
+						</ul>
+						<a class="button" href="{{ .button }}" class="w-100 btn btn-lg btn-secondary">Register now</a> 
+					</div>
+				</div>
+			</div>
+			{{ end }} 
+		</div>
+		<h2 class="mb-3">
+			Youth and Post-Secondary Partial Pricing
+		</h2>
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Friday</th>
+					<th scope="col">Saturday</th>
+					<th scope="col">Sunday</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{ range $pricingyouthpsparts }}
+				<tr>
+					{{ range .row  }}
+					<td>{{ . }}</td>
+					{{ end }}
+				</tr>
+				{{ end }}
+			</tbody>
+		</table>
+		<h2 class="mb-3 mt-3">
+			Adult Partial Pricing
+		</h2>
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Friday</th>
+					<th scope="col">Saturday</th>
+					<th scope="col">Sunday</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{ range $pricingadultparts }}
+				<tr>
+					{{ range .row  }}
+					<td>{{ . }}</td>
+					{{ end }}
+				</tr>
+				{{ end }}
+			</tbody>
+		</table>
+
+
+	</div>
+</div>
+
+
+
+<!-- SCHEDULE -->
+<div id="schedule">
+	<div class="container pt-4 pb-4 pb-md-8 pt-md-8">
+		<h2 class="mb-3">
+			Schedule
+		</h2>
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FEdmonton&showPrint=0&showNav=0&showTabs=0&showCalendars=0&mode=AGENDA&src=Y19kZjk3ZDk3ZmVmNDBlOWVlZDA5YzkxMzZkM2M0NzI1MDc4Y2U5OTAxODVkYTkyZWE5MTM1MWE3ODM2OGJmMTk0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F09300" style="border:solid 1px #777" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+	</div>
+</div>
+
+
+
+<!-- LOCATION -->
+{{ range first 1 (after 1 $reusablePages) }} 
+<div id="location" class="strip bg-cover bg-position-top bg-overlay pt-5 pb-5" style="background-image: url('{{ .Params.background | relURL }}');">
+	<div class="container pt-5 pb-5 bg-white-transparent">
+		<div class="row">
+			<div class="col-12 offset-md-0 p-4">
+				<h2 class="text-primary text-capitalize">
+					{{ .Title }}
+				</h2>
+				<p>
+					{{ .Content }}
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5016.194916238579!2d-114.06804598714292!3d51.051288243802375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe60e60765b%3A0x70e50fe42b840169!2sCalgary%20Chinese%20Cultural%20Centre!5e0!3m2!1sen!2sca!4v1741066838747!5m2!1sen!2sca" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<a class="button mt-3" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a> 
+
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }} {{ range first 1 (after 2 $reusablePages) }} 
+<div id="faq" class="bg-cover bg-position-top bg-overlay ">
+	<div class="container pt-5 pb-5">
+		<div class="row justify-content-center">
+			<div class="col-8 text-white">
+				<h2 class="pb-3 pt-3">
+					{{ .Title }}
+				</h2>
+				{{ .Content }} {{ if .Params.button }} 
+				<div class="text-center pb-3 pt-3">
+					<a class="button button-white" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a> 
+				</div>
+				{{ end }} 
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }} {{ end }} {{ define "footer_js" }} {{ end }} 

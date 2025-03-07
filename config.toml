@@ -1,6 +1,6 @@
 baseURL = "https://45.calgaryaikikai.com"
 languageCode = "en-us"
-title = "45 Years of Aikido in Calgary"
+title = "Calgary Aikikai"
 theme = "hugo-hero-theme"
 
 [module]
@@ -12,49 +12,48 @@ theme = "hugo-hero-theme"
   google_analytics_id="G-YFZZMXQYDY"
 
   [params.logo]
-    mobile = "images/logo-mobile.svg"
-    mobile_height = "36px"
-    mobile_width = "36px"
-    desktop = "images/logo.svg"
-    desktop_height = "29px"
-    desktop_width = "217px"
-    alt = "Hugo Hero"
+    mobile = "images/ca.logo-large.png"
+    mobile_height = "129px"
+    mobile_width = "129px"
+    desktop = "images/ca.logo-large.png"
+    desktop_height = "388px"
+    desktop_width = "388px"
+    alt = "Calgary Aikikai"
 
   [params.homepage_meta_tags]
-    meta_description = "Hero is a multipurpose Hugo theme with fullscreen hero images and page sections. It contains content types for a business or portfolio site."
-    meta_og_title = "Hugo Hero Theme"
+    meta_description = "Calgary Aikikai is celebrating 45 years of teaching aikdo to the Calgary area. Come join us as we welcome three senseis from Japan and the USA."
+    meta_og_title = "Calgary Aikikai 45th Anniversay Seminar"
     meta_og_type = "website"
-    meta_og_url = "https://hugo-hero.netlify.app"
-    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-hero-theme/master/images/tn.png"
-    meta_og_description = "Hero is a multipurpose Hugo theme with fullscreen hero images and page sections. It contains content types for a business or portfolio site."
+    meta_og_url = "https://calgaryaikikai.com"
+    meta_og_description = "Calgary Aikikai is celebrating 45 years of teaching aikdo to the Calgary area. Come join us as we welcome three senseis from Japan and the USA."
     meta_twitter_card = "summary"
-    meta_twitter_site = "@zerostaticio"
-    meta_twitter_creator = "@zerostaticio"
+    meta_twitter_site = "@calgaryaikikai"
+    meta_twitter_creator = "@calgaryaikikai"
 
 [[menu.main]]
-	name = "Shihan Info"
-	url = "/services/"
+	name = "Details"
+	url = "#details"
     weight = 1
 
-# [[menu.main]]
-#    name = "Work"
-#   url = "/work/"
-#   weight = 2
-
-#[[menu.main]]
-#    name = "About"
-#    url = "/about/"
-#    weight = 3
-
-#[[menu.main]]
-#    name = "History"
-#    url = "/history/"
-#    weight = 3
+[[menu.main]]
+   name = "Pricing"
+  url = "#pricing"
+  weight = 2
 
 [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 2
+   name = "Schedule"
+   url = "#schedule"
+   weight = 3
+
+[[menu.main]]
+   name = "Location"
+   url = "#location"
+   weight = 4
+
+[[menu.main]]
+    name = "FAQs"
+    url = "#faq"
+    weight = 5
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"
