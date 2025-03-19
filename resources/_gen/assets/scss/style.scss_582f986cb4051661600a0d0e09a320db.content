@@ -12445,6 +12445,40 @@ ol {
           margin-left: 10px; }
           .sub-footer .sub-footer-inner ul li:first-of-type {
             margin-left: 0; } }
+.partners {
+  background: #fa9d33;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .partners .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 576px) {
+      .partners .footer-inner {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center; } }
+  .partners .footer-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+    margin-bottom: 10px;
+    flex: 0; }
+    @media (min-width: 576px) {
+      .partners .footer-title {
+        margin: 0;
+        flex: 0 0 120px; } }
+  .partners .footer-menu {
+    margin-top: 16px;
+    display: flex;
+    align-items: center; }
+    @media (min-width: 576px) {
+      .partners .footer-menu {
+        margin-top: 0; } }
+  .partners ul li {
+    margin-top: 15px; }
+
 .logo {
   display: none; }
   @media (min-width: 576px) {

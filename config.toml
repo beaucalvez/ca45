@@ -3,6 +3,15 @@ languageCode = "en-us"
 title = "Calgary Aikikai"
 theme = "hugo-hero-theme"
 
+# Build optimization settings
+enableGitInfo = true
+minify = true
+enableRobotsTXT = true
+enableSitemap = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
 [module]
   [module.hugoVersion]
     extended = true
@@ -50,6 +59,11 @@ theme = "hugo-hero-theme"
    url = "#location"
    weight = 4
 
+#[[menu.main]]
+#   name = "Accommodations"
+#   url = "#accommodations"
+#   weight = 5
+
 [[menu.main]]
     name = "FAQs"
     url = "#faq"
@@ -58,3 +72,9 @@ theme = "hugo-hero-theme"
 [permalinks]
   post = "/:year/:month/:day/:slug/"
   pages = "/:filename/"
+
+# Output settings for better performance
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]

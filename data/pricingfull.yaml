@@ -37,9 +37,9 @@ full:
 
 # friday, saturday, sunday
 partialsadult:
-  - row: ["N/a","AM: $87.50","AM: $105.00"]
+  - row: ["N/a","AM: $122.50","AM: $105.00"]
   - row: ["PM: $70.00","PM: $70.00","PM: $52.50"]
 
 partialsyouthps:
-  - row: ["N/a","AM: $43.75","AM: $52.50"]
+  - row: ["N/a","AM: $61.25","AM: $52.50"]
   - row: ["PM: $35.00","PM: $35.00","PM: $26.25"]
