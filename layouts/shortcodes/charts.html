@@ -1,0 +1,127 @@
+<!-- Event Metrics -->
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Registration Types</h5>
+                <canvas id="registrationChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Attendees by Age</h5>
+                <canvas id="revenueChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Registration Timeline</h5>
+                <canvas id="timelineChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<!-- Prepare data -->
+<script>
+const chartData = {
+  registration: {
+    labels: {{ .Site.Data.metrics.registration_types.labels | jsonify | safeJS }},
+    data: {{ .Site.Data.metrics.registration_types.data | jsonify | safeJS }},
+    colors: {{ .Site.Data.metrics.registration_types.colors | jsonify | safeJS }}
+  },
+  revenue: {
+    labels: {{ .Site.Data.metrics.revenue.labels | jsonify | safeJS }},
+    data: {{ .Site.Data.metrics.revenue.data | jsonify | safeJS }},
+    colors: {{ .Site.Data.metrics.revenue.colors | jsonify | safeJS }}
+  },
+  timeline: {
+    labels: {{ .Site.Data.metrics.timeline.labels | jsonify | safeJS }},
+    data: {{ .Site.Data.metrics.timeline.data | jsonify | safeJS }},
+    color: {{ .Site.Data.metrics.timeline.color | jsonify | safeJS }}
+  }
+};
+</script>
+
+<!-- Initialize charts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Registration Types Chart
+  const registrationCtx = document.getElementById('registrationChart');
+  if (registrationCtx) {
+    new Chart(registrationCtx, {
+      type: 'doughnut',
+      data: {
+        labels: chartData.registration.labels,
+        datasets: [{
+          data: chartData.registration.data,
+          backgroundColor: chartData.registration.colors
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  }
+
+  // Revenue Chart
+  const revenueCtx = document.getElementById('revenueChart');
+  if (revenueCtx) {
+    new Chart(revenueCtx, {
+      type: 'bar',
+      data: {
+        labels: chartData.revenue.labels,
+        datasets: [{
+          label: 'Revenue ($)',
+          data: chartData.revenue.data,
+          backgroundColor: chartData.revenue.colors
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+
+  // Timeline Chart
+  const timelineCtx = document.getElementById('timelineChart');
+  if (timelineCtx) {
+    new Chart(timelineCtx, {
+      type: 'line',
+      data: {
+        labels: chartData.timeline.labels,
+        datasets: [{
+          label: 'Total Registrations',
+          data: chartData.timeline.data,
+          borderColor: chartData.timeline.color,
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+});
+</script> 

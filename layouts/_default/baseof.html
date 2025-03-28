@@ -29,7 +29,9 @@
     {{ block "main" . }}
     {{ end }}
   </div>
+  {{ if ne .Type "admin" }}
   {{ partial "partners.html" . }}
+  {{ end }}
   {{ partial "footer.html" . }}
   {{ partial "sub-footer.html" . }}
 

@@ -39,35 +39,35 @@ buildExpired = false
     meta_twitter_site = "@calgaryaikikai"
     meta_twitter_creator = "@calgaryaikikai"
 
-[[menu.main]]
-	name = "Details"
-	url = "#details"
-    weight = 1
+#[[menu.main]]
+#	name = "Details"
+#	url = "/#details"
+#    weight = 1
 
 [[menu.main]]
    name = "Pricing"
-  url = "#pricing"
+  url = "/#pricing"
   weight = 2
 
 [[menu.main]]
    name = "Schedule"
-   url = "#schedule"
+   url = "/#schedule"
    weight = 3
 
 [[menu.main]]
    name = "Location"
-   url = "#location"
+   url = "/#location"
    weight = 4
 
-#[[menu.main]]
-#   name = "Accommodations"
-#   url = "#accommodations"
-#   weight = 5
+[[menu.main]]
+   name = "Hotels"
+   url = "/#accommodations"
+   weight = 5
 
 [[menu.main]]
     name = "FAQs"
-    url = "#faq"
-    weight = 5
+    url = "/#faq"
+    weight = 6
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"

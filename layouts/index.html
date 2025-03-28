@@ -166,30 +166,51 @@
 {{ end }}
 
 <!-- Hotel Details -->
-<!-- 
 {{ range first 1 (after 2 $reusablePages) }} 
 <div id="accommodations" class="strip bg-cover bg-position-top bg-overlay" style="background-image: url('{{ .Params.background | relURL }}');">
 	<div class="container pt-7 pb-7">
 		<div class="row">
-			<div class="col-12 col-lg-6 col-xl-10  offset-xl-4 offset-lg-6 bg-white-transparent p-4">
+			<div class="col-12 col-md-12 col-lg-6 col-xl-10 offset-xl-4 offset-md-0 bg-white-transparent p-4">
 				<h2 class="text-primary text-capitalize">
 					{{ .Title }}
 				</h2>
 				<p>
 					{{ .Content }}
 				</p>
-				<a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a> 
+				<div class="row row-cols-1 row-cols-md-3 mb-2 text-center">
+					{{ $hotels := .Site.Data.hotels.hotels }}
+					{{ range $hotels }}
+					<div class="col">
+						<div class="card mb-4 rounded-3 shadow-sm" style="--bs-card-spacer-y: 0.5rem; --bs-card-spacer-x: 0.75rem;">
+							<div class="card-header py-2">
+								<h4 class="my-0 fw-bold small">{{ .name }}</h4>
+							</div>
+							<div class="card-body p-2">
+								<p class="card-text small">{{ .description }}</p>
+								<ul class="list-unstyled mt-2 mb-2">
+									<li class="mb-1 small">{{ .price }}</li>
+									<li class="mb-2 small"><a href="{{ .mapLink }}" target="_blank">View on Map</a></li>
+								</ul>
+								{{ if .disabled }}
+									<button class="btn btn-outline-primary btn-sm" disabled>{{ .buttonText }}</button>
+								{{ else }}
+									<a class="btn btn-primary btn-sm" href="{{ .buttonLink }}">{{ .buttonText }}</a>
+								{{ end }}
+							</div>
+						</div>
+					</div>
+					{{ end }}
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 {{ end }}
- -->
 
 
 
 <!-- FAQ -->
-{{ range first 1 (after 2 $reusablePages) }} 
+{{ range first 1 (after 3 $reusablePages) }} 
 	<div id="faq" class="bg-cover bg-position-top bg-overlay ">
 		<div class="container pt-5 pb-5">
 			<div class="row justify-content-center">

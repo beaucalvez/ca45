@@ -35,7 +35,7 @@ buttonLink: 'https://forms.gle/aToNGKexPyFvWMMR8'
 : Chinatown has dozens of food establishments within a few minutes' walk of the seminar. Snacks, groceries, coffee, lunch and dinner are readily available and reasonably priced.
 
 **What is the Saturday evening banquet?**
-: No anniversary seminar is complete without a celebration banquet! Everyone is invited to come and dine together to mark another milestone in the history of Calgary Aikikai. More details to come on this event. Budget for roughly $45 - $75 per person and the dress code is usually "business casual".
+: No anniversary seminar is complete without a celebration banquet! Everyone is invited to come and dine together to mark another milestone in the history of Calgary Aikikai. More details to come on this event. Budget for roughly $60 - $90 per person and the dress code is usually "business casual".
  
 **What else is there to do in Calgary?**
 : Calgary is a modern city of 1.4 million people. Museums, Galleries, nightlife and neighbourhoods to explore are within easy walking distance from the seminar venue. We recommend taking in the country around Calgary as well. The Rocky Mountains of Banff and Canmore, Kananaskis Country, Dinosaur Park and Drumheller are absolutely worth a visit. Check out our partner site [Tourism Calgary](https://www.visitcalgary.com/) for more ideas.

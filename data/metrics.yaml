@@ -1,0 +1,44 @@
+registration_types:
+  labels:
+    - Full Seminar
+    - Partial Days
+    - Ukemi Workshop
+  data:
+    - 11
+    - 0
+    - 9
+  colors:
+    - rgb(5, 2, 53)    # Primary color
+    - rgb(197, 5, 9)   # Secondary color
+    - rgb(250, 157, 51) # Highlight color
+
+revenue:
+  labels:
+    - Adults
+    - Youths/Student
+  data:
+    - 11
+    - 0
+  colors:
+    - rgb(5, 2, 53)    # Primary color
+    - rgb(197, 5, 9)   # Secondary color
+    - rgb(250, 157, 51) # Highlight color
+
+timeline:
+  labels:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+  data:
+    - 0
+    - 0
+    - 11
+    - 
+    - 
+    - 
+    - 
+  color: rgb(5, 2, 53)  # Primary color 
