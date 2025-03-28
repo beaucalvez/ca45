@@ -4,7 +4,7 @@ hotels:
     buttonLink: "#"
     buttonText: "Coming Soon"
     mapLink: "https://maps.app.goo.gl/c2h85pJDtjntvrB57"
-    description: "A modern hotel with comfortable rooms and excellent amenities, just 6 minutes from the seminar location."
+    description: "A modern hotel with comfortable rooms and excellent amenities, centrally located, just 6 minutes from the seminar location."
     disabled: true
 
   - name: "Delta Hotels Calgary Downtown"
@@ -16,8 +16,7 @@ hotels:
 
   - name: "Calgary Marriott"
     price: "From $209 CAD"
-    buttonLink: "#"
-    buttonText: "Coming Soon"
+    buttonLink: "https://www.marriott.com/event-reservations/reservation-link.mi?id=1742942296790&key=GRP&guestreslink2=true&app=resvlink"
+    buttonText: "Reserve Now"
     mapLink: "https://maps.app.goo.gl/LsLDr6T4DKR2xMio8"
     description: "Located in downtown Calgary, this hotel features a fitness center and restaurant, with a 14-minute walk to the seminar venue." 
-    disabled: true

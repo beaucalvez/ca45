@@ -1,5 +1,5 @@
 ---
-title: 'Seminar Accommodations'
+title: 'Hotel Accommodations'
 weight: 3
 background: 'images/hotel.png'
 ---
