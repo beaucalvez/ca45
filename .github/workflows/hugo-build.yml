@@ -2,17 +2,30 @@ name: Hugo Build Check
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      # ✅ Step 1: Checkout code with submodules
+      - name: Checkout repository (including submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # This is critical if your theme is a git submodule
+
+      # ✅ Step 2: Set up Hugo (extended version)
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'v0.145.0+extended'
-      - name: Build site
-        run: hugo
+          hugo-version: '0.145.0'
+          extended: true
+
+      # ✅ Step 3: Build the site
+      - name: Build with Hugo
+        run: hugo --minify
+
+      # (Optional) You can add a deploy step after this
