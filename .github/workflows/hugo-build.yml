@@ -1,4 +1,4 @@
-name: Hugo Build Check
+name: Hugo Build and SSH Test
 
 on:
   push:
@@ -7,25 +7,35 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-test-ssh:
     runs-on: ubuntu-latest
 
     steps:
-      # ✅ Step 1: Checkout code with submodules
-      - name: Checkout repository (including submodules)
+      # ✅ Checkout your repository
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: true  # This is critical if your theme is a git submodule
 
-      # ✅ Step 2: Set up Hugo (extended version)
+      # ✅ Set up Hugo (extended version)
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.145.0'
           extended: true
 
-      # ✅ Step 3: Build the site
-      - name: Build with Hugo
+      # ✅ Build your Hugo site
+      - name: Build Hugo site
         run: hugo --minify
 
-      # (Optional) You can add a deploy step after this
+      # ✅ Set up SSH agent with your deploy key
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # ✅ Add your server to known_hosts to avoid interactive prompt
+      - name: Add server to known_hosts
+        run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
+
+      # ✅ Dry run test: SSH into your server and echo a message
+      - name: SSH dry run (confirm connection works)
+        run: ssh ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} 'echo "✅ SSH works from GitHub!"'
