@@ -59,14 +59,12 @@
   {{ end }}
 
   <!-- JS file processing -->
-  {{ $scripts := resources.Get "js/scripts.js" | resources.ExecuteAsTemplate "js/scripts.js" . }}
   {{ if hugo.IsServer }}
     <!-- Development: load plain JS file -->
-    <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
   {{ else }}
-    <!-- Production: minify and fingerprint the JS file -->
-    {{ $minifiedJS := $scripts | resources.Minify | resources.Fingerprint }}
-    <script type="text/javascript" src="{{ $minifiedJS.RelPermalink }}"></script>
+    <!-- Production: load minified JS file -->
+    <script type="text/javascript" src="/js/scripts.min.js"></script>
   {{ end }}
 
   <!-- Google Analytics partial (optional tracking) -->
