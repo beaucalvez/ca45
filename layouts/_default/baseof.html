@@ -65,7 +65,7 @@
     <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
   {{ else }}
     <!-- Production: minify and fingerprint the JS file -->
-    {{ $minifiedJS := $scripts | minify | fingerprint }}
+    {{ $minifiedJS := $scripts | resources.Minify | resources.Fingerprint }}
     <script type="text/javascript" src="{{ $minifiedJS.RelPermalink }}"></script>
   {{ end }}
 
