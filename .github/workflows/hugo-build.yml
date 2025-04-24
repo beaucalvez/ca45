@@ -1,4 +1,4 @@
-name: Hugo Build and SSH Test
+name: Hugo Build and Deploy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-test-ssh:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 0.145.0
+          hugo-version: '0.145.0'
           extended: true
 
       # ✅ Build your Hugo site
@@ -37,10 +37,17 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # ✅ Add your server to known_hosts to avoid interactive prompt
+      # ✅ Add your server to known_hosts to avoid prompt
       - name: Add server to known_hosts
         run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
 
+      # ✅ Optional: Backup existing site before deploy
+      - name: 🛡️ Backup existing site
+        run: |
+          ssh ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} \
+          'cp -r ~/45.calgaryaikikai.com ~/45.backup.$(date +%Y%m%d-%H%M%S)'
+
+      # ✅ Deploy site with rsync
       - name: 🚀 Deploy site with rsync
-      run: |
-        rsync -avz --delete ./public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:~/45.calgaryaikikai.com
+        run: |
+          rsync -avz --delete ./public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:~/45.calgaryaikikai.com
