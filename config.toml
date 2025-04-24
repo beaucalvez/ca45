@@ -13,6 +13,27 @@ buildFuture = false
 buildExpired = false
 
 [module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "themes/hugo-hero-theme/layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "themes/hugo-hero-theme/static"
+    target = "static"
   [module.hugoVersion]
     extended = true
     min = "0.92.0"
