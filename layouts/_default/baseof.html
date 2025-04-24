@@ -10,14 +10,16 @@
   <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
 
   {{ if hugo.IsServer }}
-    {{ $scss := resources.Get "scss/style.scss" }}
-    {{ $style := $scss | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    {{ else }}
-    {{ $scss := resources.Get "scss/style.scss" }}
-    {{ $style := $scss | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    {{ end }}
+  {{ $scss := resources.Get "scss/style.scss" }}
+  {{ $style := $scss | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ else }}
+  {{ $scss := resources.Get "scss/style.scss" }}
+  {{ $style := $scss | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
+  {{ $minified := $style | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $minified.RelPermalink }}">
+  {{ end }}
+
 
   {{ block "header_css" . }}{{ end }}
 
@@ -38,15 +40,16 @@
   {{ partial "footer.html" . }}
   {{ partial "sub-footer.html" . }}
 
-  {{ $scripts := resources.Get "js/scripts.js" }}
 
   {{ block "footer_js" . }}
   {{ end }}
 
+  {{ $scripts := resources.Get "js/scripts.js" }}
   {{ if hugo.IsServer }}
-  <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+    <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
   {{ else }}
-  <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
+    {{ $minifiedJS := $scripts | minify | fingerprint }}
+    <script type="text/javascript" src="{{ $minifiedJS.RelPermalink }}"></script>
   {{ end }}
 
   {{ partial "google-analytics.html" . }}
