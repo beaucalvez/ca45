@@ -25,7 +25,7 @@ jobs:
       # ✅ Build your Hugo site
       - name: Build Hugo site
         run: |
-          hugo --minify --verbose
+          hugo --minify
           if [ ! -d "public" ]; then
             echo "Build failed - public directory not created"
             exit 1
