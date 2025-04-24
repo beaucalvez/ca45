@@ -24,7 +24,12 @@ jobs:
 
       # ✅ Build your Hugo site
       - name: Build Hugo site
-        run: hugo --minify
+        run: |
+          hugo --minify --verbose
+          if [ ! -d "public" ]; then
+            echo "Build failed - public directory not created"
+            exit 1
+          fi
 
       # ✅ Set up SSH agent with your deploy key
       - name: Setup SSH agent
