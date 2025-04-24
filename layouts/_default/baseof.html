@@ -64,9 +64,8 @@
     <!-- Development: load plain JS file -->
     <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
   {{ else }}
-    <!-- Production: concat, minify, and fingerprint the JS file -->
-    {{ $bundle := slice $scripts | resources.Concat "js/bundle.js" }}
-    {{ $minifiedJS := $bundle | minify | fingerprint }}
+    <!-- Production: minify and fingerprint the JS file -->
+    {{ $minifiedJS := $scripts | minify | fingerprint }}
     <script type="text/javascript" src="{{ $minifiedJS.RelPermalink }}"></script>
   {{ end }}
 
