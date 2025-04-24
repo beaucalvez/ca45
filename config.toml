@@ -30,11 +30,11 @@ buildExpired = false
     alt = "Calgary Aikikai"
 
   [params.homepage_meta_tags]
-    meta_description = "Calgary Aikikai is celebrating 45 years of teaching aikdo to the Calgary area. Come join us as we welcome three senseis from Japan and the USA."
-    meta_og_title = "Calgary Aikikai 45th Anniversay Seminar"
+    meta_description = "Calgary Aikikai is celebrating 45 years of teaching aikido to the Calgary area. Come join us as we welcome three senseis from Japan and the USA."
+    meta_og_title = "Calgary Aikikai 45th Anniversary Seminar"
     meta_og_type = "website"
     meta_og_url = "https://calgaryaikikai.com"
-    meta_og_description = "Calgary Aikikai is celebrating 45 years of teaching aikdo to the Calgary area. Come join us as we welcome three senseis from Japan and the USA."
+    meta_og_description = "Calgary Aikikai is celebrating 45 years of teaching aikido to the Calgary area. Come join us as we welcome three senseis from Japan and the USA."
     meta_twitter_card = "summary"
     meta_twitter_site = "@calgaryaikikai"
     meta_twitter_creator = "@calgaryaikikai"
