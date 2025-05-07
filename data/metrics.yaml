@@ -6,7 +6,7 @@ registration_types:
     - Ukemi Workshop
   data:
     - 29
-    - 0
+    - 2
     - 22
   colors:
     - rgb(5, 2, 53)    # Primary color
