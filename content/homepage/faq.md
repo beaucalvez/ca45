@@ -1,6 +1,6 @@
 ---
 title: 'Frequently Asked Questions'
-weight: 4
+weight: 6
 background: ''
 button: 'Ask us a question'
 buttonLink: 'https://forms.gle/aToNGKexPyFvWMMR8'
@@ -22,7 +22,7 @@ buttonLink: 'https://forms.gle/aToNGKexPyFvWMMR8'
 
 
 **How about local transit to the area?**
-: Calgary’s LRT (called the "C-Train") runs east-west on 7th avenue and services much of the city. It is a 4-block walk from this LRT line to the venue. There is also extensive bus service to the area.
+: Calgary's LRT (called the "C-Train") runs east-west on 7th avenue and services much of the city. It is a 4-block walk from this LRT line to the venue. There is also extensive bus service to the area.
 
 
 **Can all levels of Aikido students participate in the seminar?**
@@ -46,3 +46,6 @@ buttonLink: 'https://forms.gle/aToNGKexPyFvWMMR8'
 
 **Can anyone participate in the Advanced Ukemi Workshop with Shirakawa Shihan?**
 : While there is no minimum rank or ability required to register for this pre-seminar workshop, you should be aware that the content is intended for those who have at least a moderate practical ability to take ukemi. If basic rolls are a challenge or if you've never taken a breakfall before, this workshop may not be for you. Use your discretion.
+
+<strong id = "dresscode">What does "Business Casual to Semi-Formal" mean?</strong>
+: It's a flexible dress code that encourages you to look polished and comfortable, without needing a full suit or evening gown. This is a celebration, so take the opportunity to look good and feel good. If you're traveling, pack light: a collared shirt or blouse, clean shoes, and tailored pants or a simple dress will work well. Layers like a blazer or cardigan are a nice touch if you have room, but not required. Clean, low-profile sneakers are acceptable if they complement your outfit, but avoid athletic or overly worn shoes. Ties and heels are optional. Aim for something you'd feel confident wearing to a professional dinner or wedding rehearsal, and you'll be perfectly on track.

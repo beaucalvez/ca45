@@ -2,11 +2,11 @@ date_modified: May 9, 2025
 registration_types:
   labels:
     - Full Seminar
-    - Partial Days
+    - Partial Sesseions
     - Ukemi Workshop
   data:
-    - 31
-    - 2
+    - 32
+    - 8
     - 23
   colors:
     - rgb(5, 2, 53)    # Primary color
@@ -18,7 +18,7 @@ revenue:
     - Adults
     - Youths/Student
   data:
-    - 29
+    - 32
     - 3
   colors:
     - rgb(5, 2, 53)    # Primary color
@@ -40,7 +40,7 @@ timeline:
     - 0
     - 13
     - 11
-    - 2
+    - 5
     - 
     - 
     - 

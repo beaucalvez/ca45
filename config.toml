@@ -12,6 +12,9 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [module]
   [[module.mounts]]
     source = "assets"
@@ -86,9 +89,14 @@ buildExpired = false
    weight = 5
 
 [[menu.main]]
+   name = "Banquet"
+   url = "/#banquet"
+   weight = 6
+
+[[menu.main]]
     name = "FAQs"
     url = "/#faq"
-    weight = 6
+    weight = 7
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"

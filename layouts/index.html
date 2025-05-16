@@ -207,10 +207,36 @@
 </div>
 {{ end }}
 
-
+<!-- Banquet -->
+{{ range where $reusablePages ".Params.weight" 5 }} 
+<div id="banquet" class="strip bg-cover bg-position-top bg-overlay" style="background-image: url('{{ .Params.background | relURL }}');">
+	<div class="container pt-7 pb-7">
+		<div class="row">
+			<div class="col-12 col-md-12 col-lg-12 col-xl-10 offset-xl-4 offset-md-0 bg-white-transparent p-4">
+				<h2 class="text-primary text-capitalize">
+					{{ .Title }}
+				</h2>
+				<p>
+					{{ .Content }}
+				</p>
+				<ul class="list-group list-group-flush my-4">
+					<li class="list-group-item"><strong>Dress code:</strong> <a href="#dresscode" class="link-primary">Business casual to semi-formal</a></li>
+					<li class="list-group-item"><strong>Price:</strong> ${{ .Params.price }} CAD per ticket</li>
+					<li class="list-group-item"><strong>Date & Time:</strong> Saturday, August 30 at 6:00 PM</li>
+					<li class="list-group-item">
+					  <strong>Location:</strong> Silver Dragon Restaurant, <a href="https://maps.app.goo.gl/WduPubY6y3pyARUDA" target="_blank" class="link-primary">106 3 Avenue SE, Calgary, Alberta</a><br>
+					  <a href="https://www.silverdragoncalgary.com/" target="_blank" class="link-primary">Visit Silver Dragon</a>
+					</li>
+				</ul>
+				<a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}
 
 <!-- FAQ -->
-{{ range first 1 (after 3 $reusablePages) }} 
+{{ range where $reusablePages ".Params.weight" 6 }} 
 	<div id="faq" class="bg-cover bg-position-top bg-overlay ">
 		<div class="container pt-5 pb-5">
 			<div class="row justify-content-center">
