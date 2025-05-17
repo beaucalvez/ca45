@@ -7,7 +7,7 @@ buttonLink: 'https://store.calgaryaikikai.com/shop/45th-anniversary/HSRFSJE5ERWT
 price: 85
 ---
 
-In the spirit of the seminar's location, we've reserved a private room at Calgary's foremost Chinese restaurant, **Silver Dragon**. This is where the iconic ginger beef recipe, a Calgary original, first gained fame.
+In the spirit of the seminar's location, we've reserved a private room at Calgary's foremost Chinese restaurant, **Silver Dragon**. Come taste the iconic Ginger Beef, a Calgary original, at one of Calgary's best.
 
 Established in 1966, Silver Dragon is located in the heart of Chinatown and is just a short walk from the seminar hotels.
 
