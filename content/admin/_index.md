@@ -17,9 +17,3 @@ type: admin
 
 {{< charts >}}
 
----
-
-## Tasks to Complete
-- Add banquet location and agenda
-- Set up guest channel on Slack
-- Create images section
