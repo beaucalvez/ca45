@@ -5,9 +5,9 @@ registration_types:
     - Partial Sesseions
     - Ukemi Workshop
   data:
-    - 37
+    - 39
     - 8
-    - 26
+    - 28
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -19,9 +19,9 @@ revenue:
     - Youths/Student
     - Banquet
   data:
-    - 37
+    - 39
     - 4
-    - 3
+    - 6
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -42,7 +42,7 @@ timeline:
     - 0
     - 13
     - 11
-    - 11
+    - 13
     - 
     - 
     - 
