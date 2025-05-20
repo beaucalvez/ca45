@@ -65,7 +65,7 @@
 							<h1 class="card-title pricing-card-title">
 								Price: ${{ .price1 }} <br />
 								{{ if and .numOfSeats .numSold }}
-								<span class="badge bg-info">{{ math.Round (mul (div (float .numSold) (float .numOfSeats)) 100) }}% sold out</span>
+								<span class="badge bg-info">{{ math.Round (mul (div (float .numSold) (float .numOfSeats)) 100) }}% SOLD</span>
 								{{ end }}
 							</h1>
 						{{ else }}	
