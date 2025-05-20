@@ -21,7 +21,7 @@ revenue:
   data:
     - 37
     - 4
-    - 2
+    - 3
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
