@@ -5,6 +5,8 @@ full:
     subhead: "Add-on to seminar"
     featured: true
     price1: "50.00"
+    numOfSeats: 50
+    numSold: 26
     className: text-bg-primary
     price2:
     button: "https://store.calgaryaikikai.com/45" 
