@@ -1,4 +1,6 @@
 date_modified: May 20, 2025
+total_registrants: 42  # Sum of all registration types
+
 registration_types:
   labels:
     - Full Seminar
