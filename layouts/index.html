@@ -229,11 +229,7 @@
 					  <strong>Location:</strong> Silver Dragon Restaurant, <a href="https://maps.app.goo.gl/WduPubY6y3pyARUDA" target="_blank" class="link-primary">106 3 Avenue SE, Calgary, Alberta</a><br>
 					  <a href="https://www.silverdragoncalgary.com/" target="_blank" class="link-primary">Visit Silver Dragon</a>
 					</li>
-					{{ range where $pricing "name" "Banquet" }}
-					<li class="list-group-item">
-						<strong>Tickets:</strong> {{ math.Round (mul (div .numSold .numOfSeats) 100) }}% sold ({{ .numSold }} of {{ .numOfSeats }} seats)
-					</li>
-					{{ end }}
+					<li class="list-group-item">Deadline for Banquet Tickets: <strong>August 23rd</strong></li>
 				</ul>
 				<a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
 			</div>
