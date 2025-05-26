@@ -9,7 +9,7 @@ registration_types:
   data:
     - 39
     - 8
-    - 28
+    - 29
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -23,7 +23,7 @@ revenue:
   data:
     - 39
     - 4
-    - 6
+    - 10
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
