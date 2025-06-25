@@ -1,4 +1,4 @@
-date_modified: Jun 16, 2025
+date_modified: Jun 25, 2025
 total_registrants: 50  # Sum of all registration types
 
 registration_types:
@@ -7,8 +7,8 @@ registration_types:
     - Partial Sessions
     - Ukemi Workshop
   data:
-    - 45
-    - 12
+    - 46
+    - 11
     - 33
   colors:
     - rgb(5, 2, 53)    # Primary color
@@ -23,7 +23,7 @@ revenue:
   data:
     - 46
     - 5
-    - 20
+    - 23
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
