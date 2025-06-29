@@ -38,8 +38,16 @@
             </div>
         </div>
     </div>
-    <div class="col-12 mb-4">
-        <div class="card">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Demographics by Location</h5>
+                <canvas id="demographicsChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
             <div class="card-body">
                 <h5 class="card-title">Registration Timeline</h5>
                 <canvas id="timelineChart"></canvas>
@@ -62,6 +70,11 @@ const chartData = {
     labels: {{ .Site.Data.metrics.revenue.labels | jsonify | safeJS }},
     data: {{ .Site.Data.metrics.revenue.data | jsonify | safeJS }},
     colors: {{ .Site.Data.metrics.revenue.colors | jsonify | safeJS }}
+  },
+  demographics: {
+    labels: {{ .Site.Data.metrics.demographics.labels | jsonify | safeJS }},
+    data: {{ .Site.Data.metrics.demographics.data | jsonify | safeJS }},
+    colors: {{ .Site.Data.metrics.demographics.colors | jsonify | safeJS }}
   },
   timeline: {
     labels: {{ .Site.Data.metrics.timeline.labels | jsonify | safeJS }},
@@ -115,6 +128,29 @@ document.addEventListener('DOMContentLoaded', function() {
         scales: {
           y: {
             beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+
+  // Demographics Chart
+  const demographicsCtx = document.getElementById('demographicsChart');
+  if (demographicsCtx) {
+    new Chart(demographicsCtx, {
+      type: 'pie',
+      data: {
+        labels: chartData.demographics.labels,
+        datasets: [{
+          data: chartData.demographics.data,
+          backgroundColor: chartData.demographics.colors
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
           }
         }
       }

@@ -1,5 +1,5 @@
 date_modified: Jun 29, 2025
-total_registrants: 60  # Sum of all registration types
+total_registrants: 58  # Sum of all registration types
 
 registration_types:
   labels:
@@ -28,6 +28,32 @@ revenue:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
     - rgb(250, 157, 51) # Highlight color
+
+demographics:
+  labels:
+    - Canada (outside of Calgary)
+    - Calgary Dojos (Not Calgary Aikikai)
+    - Calgary Aikikai
+    - United States
+    - Japan
+    - Switzerland
+    - Finland
+  data:
+    - 7
+    - 7
+    - 17
+    - 22
+    - 3
+    - 1
+    - 1
+  colors:
+    - rgb(5, 2, 53)     # Primary color
+    - rgb(197, 5, 9)    # Secondary color
+    - rgb(250, 157, 51) # Highlight color
+    - rgb(75, 192, 192) # Teal
+    - rgb(153, 102, 255) # Purple
+    - rgb(255, 159, 64)  # Orange
+    - rgb(201, 203, 207) # Grey
 
 timeline:
   labels:
