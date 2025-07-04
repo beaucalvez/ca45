@@ -1,4 +1,4 @@
-date_modified: Jul 3, 2025
+date_modified: Jul 4, 2025
 total_registrants: 63  # Sum of all registration types
 
 registration_types:
@@ -23,7 +23,7 @@ revenue:
   data:
     - 50
     - 6
-    - 27
+    - 29
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
