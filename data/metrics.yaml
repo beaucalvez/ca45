@@ -23,7 +23,7 @@ revenue:
   data:
     - 51
     - 6
-    - 47 #includes 14/16 VIPs
+    - 53 #includes 14/16 VIPs
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
