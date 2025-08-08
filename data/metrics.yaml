@@ -7,7 +7,7 @@ registration_types:
     - Partial Sessions
     - Ukemi Workshop
   data:
-    - 58
+    - 57
     - 14
     - 37
   colors:
@@ -21,7 +21,7 @@ revenue:
     - Youths/Student
     - Banquet
   data:
-    - 51
+    - 50
     - 6
     - 53 #includes 14/16 VIPs
   colors:
@@ -39,7 +39,7 @@ demographics:
     - Switzerland
     - Finland
   data:
-    - 10
+    - 9
     - 8
     - 18
     - 23
