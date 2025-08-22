@@ -6,7 +6,7 @@ full:
     featured: true
     price1: "50.00"
     numOfSeats: 50
-    numSold: 28
+    numSold: 40
     className: text-bg-primary
     price2:
     button: "https://store.calgaryaikikai.com/45" 

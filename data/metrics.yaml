@@ -1,4 +1,4 @@
-date_modified: Aug 19, 2025
+date_modified: Aug 22, 2025
 total_registrants: 64  # Sum of all registration types
 
 registration_types:
@@ -8,7 +8,7 @@ registration_types:
     - Ukemi Workshop
   data:
     - 62
-    - 16
+    - 25
     - 40
   colors:
     - rgb(5, 2, 53)    # Primary color
@@ -21,9 +21,9 @@ revenue:
     - Youths/Student
     - Banquet
   data:
-    - 54
+    - 57
     - 8
-    - 70 #includes 14/16 VIPs
+    - 72 #includes 14/16 VIPs
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -43,7 +43,7 @@ demographics:
     - 9
     - 20
     - 25
-    - 3
+    - 6
     - 1
     - 1
   colors:
@@ -73,5 +73,5 @@ timeline:
     - 20
     - 18
     - 3
-    - 3
+    - 6
   color: rgb(5, 2, 53)  # Primary color 
