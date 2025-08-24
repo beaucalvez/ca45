@@ -1,5 +1,5 @@
-date_modified: Aug 22, 2025
-total_registrants: 64  # Sum of all registration types
+date_modified: Aug 24, 2025
+total_registrants: 65  # Sum of all registration types
 
 registration_types:
   labels:
@@ -8,8 +8,8 @@ registration_types:
     - Ukemi Workshop
   data:
     - 62
-    - 25
-    - 40
+    - 29
+    - 41
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -23,7 +23,7 @@ revenue:
   data:
     - 57
     - 8
-    - 72 #includes 14/16 VIPs
+    - 73 #includes 12 VIPs
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -41,7 +41,7 @@ demographics:
   data:
     - 9
     - 9
-    - 20
+    - 21
     - 25
     - 6
     - 1
@@ -73,5 +73,5 @@ timeline:
     - 20
     - 18
     - 3
-    - 6
+    - 7
   color: rgb(5, 2, 53)  # Primary color 
