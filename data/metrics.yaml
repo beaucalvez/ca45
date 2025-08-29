@@ -1,4 +1,4 @@
-date_modified: Aug 24, 2025
+date_modified: Aug 29, 2025
 total_registrants: 65  # Sum of all registration types
 
 registration_types:
@@ -7,9 +7,9 @@ registration_types:
     - Partial Sessions
     - Ukemi Workshop
   data:
-    - 62
-    - 29
-    - 41
+    - 63
+    - 34
+    - 46
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -23,7 +23,7 @@ revenue:
   data:
     - 57
     - 8
-    - 73 #includes 12 VIPs
+    - 75 #includes 12 VIPs
   colors:
     - rgb(5, 2, 53)    # Primary color
     - rgb(197, 5, 9)   # Secondary color
@@ -40,9 +40,9 @@ demographics:
     - Finland
   data:
     - 9
-    - 9
+    - 11
     - 21
-    - 25
+    - 27
     - 6
     - 1
     - 1
@@ -73,5 +73,5 @@ timeline:
     - 20
     - 18
     - 3
-    - 7
+    - 11
   color: rgb(5, 2, 53)  # Primary color 
